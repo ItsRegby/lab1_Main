@@ -11,8 +11,8 @@ namespace lab_1
             /*Triangle tri = new Triangle(2, 3, 4);
             Console.WriteLine(tri);
             Console.WriteLine(tri[0] + " " + tri[1] + " " + tri[2]);
-            *//*tri[0] = 10; //Exception
-            Console.WriteLine(tri);*//*
+            //tri[0] = 10; //Exception
+            Console.WriteLine(tri);
             tri[0] = 5;
             Console.WriteLine(tri);
             tri[1] = 5;
@@ -27,7 +27,7 @@ namespace lab_1
             Console.WriteLine(tri.Square);*/
 
             /*TEST 2*/
-            TCircle circle = new TCircle(5.1);
+            /*TCircle circle = new TCircle(5.1);
             Console.WriteLine(circle);
             circle.Radius = 2;
             Console.WriteLine(circle.Radius);
@@ -43,10 +43,10 @@ namespace lab_1
             Console.WriteLine(circle2);
             circle2 = circle - circle1;
             Console.WriteLine(circle2);
-            /*circle2 = circle1 - circle; //Exception check*/
+            //circle2 = circle1 - circle; //Exception check
             circle2 = circle * 2;
             Console.WriteLine(circle2);
-            circle2 = 2.5*circle;
+            circle2 = 2.5 * circle;
             Console.WriteLine(circle2);
             Console.WriteLine("\nCylinder\n");
             TCylinder cylinder = new TCylinder(3.1, 2.5);
@@ -67,12 +67,12 @@ namespace lab_1
             Console.WriteLine(cylinder2);
             cylinder2 = cylinder - cylinder1;
             Console.WriteLine(cylinder2);
-            /* cylinder2 = cylinder1 - cylinder; //Exception check
-             Console.WriteLine(cylinder2);*/
+            //cylinder2 = cylinder1 - cylinder; //Exception check
+            Console.WriteLine(cylinder2);
             cylinder2 = cylinder * 3;
             Console.WriteLine(cylinder2);
             cylinder2 = 2.5 * cylinder;
-            Console.WriteLine(cylinder2);
+            Console.WriteLine(cylinder2);*/
         }
     }
 }
