@@ -19,15 +19,17 @@ namespace lab_1
             sides[2] = c;
             InitializeFigure();
         }
+
         public double this[int key]
         {
             get { return sides[key]; }
             set
             {
-                sides[key] = value;
+                if(sides[key] > 0)
+                    sides[key] = value;
                 if (sides[0] + sides[1] < sides[2] || sides[1] + sides[2] < sides[0] || sides[0] + sides[2] < sides[1])
                 {
-                    throw new ArgumentException("Сума двох сторін не може бути меншою від значення третьої сторони.");
+                    throw new ArgumentException("Такого трикутника не існує.");
                 }
                 InitializeFigure();
             }
@@ -43,7 +45,7 @@ namespace lab_1
         private void InitializeFigure()
         {
             perimetr = sides[0] + sides[1] + sides[2];
-            double halfP = perimetr / 2.0;
+            double halfP = perimetr / 2;
             square = Math.Round(Math.Sqrt(halfP * (halfP - sides[0]) * (halfP - sides[1]) * (halfP - sides[2])), 2);
         }
         public override string ToString()

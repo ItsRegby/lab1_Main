@@ -8,12 +8,15 @@ namespace lab_1
         {
             /*TEST 1*/
 
-            /*Triangle tri = new Triangle(2, 3, 4);
+            Triangle tri = new Triangle(2, 3, 4);
             Console.WriteLine(tri);
             Console.WriteLine(tri[0] + " " + tri[1] + " " + tri[2]);
+            //tri[0] = -3; //Exception
+            //Console.WriteLine(tri);
             //tri[0] = 10; //Exception
-            Console.WriteLine(tri);
+            //Console.WriteLine(tri);
             tri[0] = 5;
+            Console.WriteLine(tri[0] + " " + tri[1] + " " + tri[2]);
             Console.WriteLine(tri);
             tri[1] = 5;
             Console.WriteLine(tri[0] + " " + tri[1] + " " + tri[2]);
@@ -24,7 +27,8 @@ namespace lab_1
             Console.WriteLine(tri[0] + " " + tri[1] + " " + tri[2]);
             Console.WriteLine(tri);
             Console.WriteLine(tri.Perimetr);
-            Console.WriteLine(tri.Square);*/
+            Console.WriteLine(tri.Square);
+            Console.ReadKey();
 
             /*TEST 2*/
             /*TCircle circle = new TCircle(5.1);
@@ -68,11 +72,12 @@ namespace lab_1
             cylinder2 = cylinder - cylinder1;
             Console.WriteLine(cylinder2);
             //cylinder2 = cylinder1 - cylinder; //Exception check
-            Console.WriteLine(cylinder2);
+            //Console.WriteLine(cylinder2);
             cylinder2 = cylinder * 3;
             Console.WriteLine(cylinder2);
             cylinder2 = 2.5 * cylinder;
-            Console.WriteLine(cylinder2);*/
+            Console.WriteLine(cylinder2);
+            Console.ReadKey();*/
         }
     }
 }

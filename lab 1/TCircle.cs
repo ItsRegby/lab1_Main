@@ -20,8 +20,11 @@ namespace lab_1
             get { return radius; }
             set
             {
-                if (value > 0)
-                    radius = value;
+                if (value <= 0)
+                {
+                    throw new ArgumentException("Радіус не може бути 0, та менше 0.");
+                }
+                radius = value;
                 InitializeFigure();
             }
         }
@@ -68,13 +71,17 @@ namespace lab_1
             cr3.Radius = cr1.radius - cr2.radius;
             if (cr3.radius <= 0)
             {
-                throw new ArgumentException("Радіус не може бути 0, чи менше.", nameof(cr3.radius));
+                throw new ArgumentException("Радіус не може бути 0, чи менше.");
             }
             return cr3;
         }
         public static TCircle operator *(TCircle cr1, double num)
         {
             TCircle cr3 = new TCircle();
+            if (num <= 0)
+            {
+                throw new ArgumentException("Радіус не може бути 0, чи менше.");
+            }
             cr3.Radius = cr1.radius * num;
             return cr3;
         }

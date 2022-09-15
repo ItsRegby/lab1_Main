@@ -19,8 +19,11 @@ namespace lab_1
             get { return height; }
             set
             {
-                if (value > 0)
-                    height = value;
+                if (value <= 0)
+                {
+                    throw new ArgumentException("Висота не може бути 0, та менше 0.");
+                }
+                height = value;
                 InitializeFigure();
             }
         }
@@ -85,14 +88,18 @@ namespace lab_1
         public static TCylinder operator *(TCylinder cyl1, double num)
         {
             TCylinder cyl3 = new TCylinder();
-            cyl3.Height = cyl1.Height*num;
+            if (num <= 0)
+            {
+                throw new ArgumentException("Значення не може бути 0, чи менше.");
+            }
+            cyl3.Height = cyl1.Height * num;
             cyl3.Radius = cyl1.radius * num;
             return cyl3;
         }
         public static TCylinder operator *(double num,TCylinder cyl1)
         {
             TCylinder cyl3 = new TCylinder();
-            cyl3.Height =cyl1.Height*num;
+            cyl3.Height = num * cyl1.Height;
             cyl3.Radius = num * cyl1.radius;
             return cyl3;
         }
